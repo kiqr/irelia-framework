@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/irelia/version"
+require_relative "lib/irelia/view_components/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "irelia"
-  spec.version     = Irelia::VERSION
+  spec.name        = "irelia-view_components"
+  spec.version     = Irelia::ViewComponents::VERSION
   spec.authors     = ["KIQR"]
   spec.email       = ["hello@kiqr.dev"]
   spec.homepage    = "https://github.com/kiqr/irelia-core"
@@ -20,5 +20,5 @@ Gem::Specification.new do |spec|
     Dir["{lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   end
 
-  spec.add_dependency "dry-configurable", "~> 1.1"
+  spec.add_dependency "rails", ">= 7.1.3.2"
 end
