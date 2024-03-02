@@ -1,21 +1,18 @@
 <section class="flex fixed h-[60px] relative bg-white gap-x-8 z-40 items-center border-b">
   <div class="container max-w-[1200px] mx-auto px-8 flex items-center h-[60px] gap-x-8">
-    <%= link_to root_path, class: 'flex gap-x-2 items-center justify-between font-bold text-primary-700 hover:text-primary-900 transition' do %>
-      <i class="fa fa-star text-xl"></i>
-    <% end %>
-    <%= render(Navbar::Separator::Component.new) %>
+    <%= render "shared/navbar_logo" %>
+
+    <%= navbar_separator %>
 
     <nav class="flex items-center gap-x-8">
-      <%= render(Navbar::Navlink::Component.new(target: root_path, text: "Dashboard", active: true)) %>
-      <%= render(Navbar::Navlink::Component.new(target: "#", text: "Projects")) %>
+      <%= navigation_item "Dashboard", root_path, { icon: "fa fa-home" } %>
     </nav>
 
     <section class="ml-auto flex items-center gap-x-4">
       <%#= render 'shared/navbar/select_account' %>
-
-      <%= render(Navbar::Separator::Component.new) %>
-      <%= render(Navbar::Button::Component.new(target: "#", icon: "fa fa-bell")) %>
-      <%= render(Navbar::Button::Component.new(target: destroy_user_session_path, method: :delete, custom_class: "text-rose-600", icon: "fa fa-right-from-bracket")) %>
+      <%= navbar_separator %>
+      <%= navbar_button(nil, "#", { icon: "fa fa-bell" }) %>
+      <%= navbar_button(nil, destroy_user_session_path, { method: :delete, class: "text-rose-600", icon: "fa fa-right-from-bracket" }) %>
     </section>
   </div>
 </section>
