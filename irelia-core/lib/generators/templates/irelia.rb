@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-Irelia.config do |config|
+Irelia.configure do |config|
   # ==> Application configuration
   # The name of the application. This will be displayed in the meta title
   # and on various places in the application.
