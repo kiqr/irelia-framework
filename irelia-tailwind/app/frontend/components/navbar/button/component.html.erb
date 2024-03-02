@@ -1,4 +1,4 @@
-<%= button_to target, class: "inline-flex items-center gap-x-1 py-3 px-4 text-sm leading-3 justify-center rounded transition bg-white hover:bg-neutral-50 whitespace-nowrap cursor-pointer #{custom_class}", method: method do %>
+<%= button_to target, class: "inline-flex items-center gap-x-1 py-3 px-4 text-sm leading-3 justify-center rounded transition bg-white hover:bg-neutral-50 dark:bg-slate-900 dark:hover:bg-slate-800 dark:text-white whitespace-nowrap cursor-pointer #{custom_class}", method: method do %>
   <% if icon.present? %>
     <i class="<%= icon %> w-3 h-3"></i>
   <% end %>
