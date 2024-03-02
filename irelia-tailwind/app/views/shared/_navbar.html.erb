@@ -1,18 +1,16 @@
-<section class="flex fixed h-[60px] relative bg-white gap-x-8 z-40 items-center border-b">
-  <div class="container max-w-[1200px] mx-auto px-8 flex items-center h-[60px] gap-x-8">
-    <%= render "shared/navbar_logo" %>
+<%= navbar do %>
+  <%= render "shared/navbar_logo" %>
 
+  <%= navbar_separator %>
+
+  <%= navbar_items do %>
+    <%= navigation_item "Dashboard", root_path, { icon: "fa fa-home" } %>
+  <% end %>
+
+  <%= navbar_right do %>
+    <%#= render 'shared/navbar/select_account' %>
     <%= navbar_separator %>
-
-    <nav class="flex items-center gap-x-8">
-      <%= navigation_item "Dashboard", root_path, { icon: "fa fa-home" } %>
-    </nav>
-
-    <section class="ml-auto flex items-center gap-x-4">
-      <%#= render 'shared/navbar/select_account' %>
-      <%= navbar_separator %>
-      <%= navbar_button(nil, "#", { icon: "fa fa-bell" }) %>
-      <%= navbar_button(nil, destroy_user_session_path, { method: :delete, class: "text-rose-600", icon: "fa fa-right-from-bracket" }) %>
-    </section>
-  </div>
-</section>
+    <%= navbar_button(nil, "#", { icon: "fa fa-bell" }) %>
+    <%= navbar_button(nil, destroy_user_session_path, { method: :delete, class: "text-rose-600", icon: "fa fa-right-from-bracket" }) %>
+  <% end %>
+<% end %>

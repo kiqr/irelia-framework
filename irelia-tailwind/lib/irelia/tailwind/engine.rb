@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "view_component-contrib"
+
 module Irelia
   module Tailwind
     class Engine < ::Rails::Engine

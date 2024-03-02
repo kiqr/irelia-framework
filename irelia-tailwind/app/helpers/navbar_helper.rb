@@ -1,6 +1,18 @@
 # frozen_string_literal: true
 
-module ComponentHelper
+module NavbarHelper
+  def navbar(&block)
+    render(Navbar::Container::Component.new) { yield }
+  end
+
+  def navbar_items(&block)
+    render(Navbar::MenuItems::Component.new) { yield }
+  end
+
+  def navbar_right(&block)
+    render(Navbar::RightSection::Component.new) { yield }
+  end
+
   def navigation_item(text, target, options = {})
     active = options[:active] || request.path == target
     icon = options[:icon] || nil
