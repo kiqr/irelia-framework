@@ -1,0 +1,5 @@
+<%= link_to target, class: "flex items-center px-1 text-sm h-[60px] border-y-2 border-transparent hover:text-primary-700 #{active ? "text-primary-700 font-bold border-b-primary-700" : "" } #{custom_class}" do %>
+  <% if text.present? %>
+    <span><%= text %></span>
+  <% end %>
+<% end %>
