@@ -1,0 +1,35 @@
+<% title "Sign in to your account" %>
+<% content_for :header do %>
+  <h1 class="font-bold font-headings text-neutral-600 text-2xl">Sign in to <strong class="text-primary-700">Irelia</strong></h1>
+  <p class="text-neutral-400">Sign in with your email address and password or select any of the other available options below.</p>
+<% end %>
+
+<%#= render "devise/shared/social_auth_buttons" %>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "p-0 m-0" }) do |f| %>
+  <div class="flex flex-col gap-y-4">
+    <div class="bg-white p-5 rounded shadow text-sm flex flex-col gap-y-1.5">
+      <p><%= f.label :email, class: "text-primary-700 font-bold text-sm uppercase whitespace-nowrap" %></p>
+      <p><%= f.email_field :email, placeholder: "Enter your email", autofocus: true, autocomplete: "email", class: "appearance-none p-0 m-0 w-full border-0 focus:ring-0 focus:outline-none bg-white text-neutral-500 hover:text-primary-800 focus:text-primary-800 placeholder-neutral-400" %></p>
+    </div>
+
+    <div class="bg-white p-5 rounded shadow text-sm flex flex-col gap-y-1.5">
+      <p><%= f.label :password, class: "text-primary-700 font-bold text-sm uppercase whitespace-nowrap" %></p>
+      <p><%= f.password_field :password, placeholder: "Enter your password", autocomplete: "current-password", class: "appearance-none p-0 m-0 w-full border-0 focus:ring-0 focus:outline-none bg-white text-neutral-500 hover:text-primary-800 focus:text-primary-800 placeholder-neutral-400" %></p>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="flex items-center gap-x-4">
+        <p><%= f.check_box :remember_me, class: "appearence-none focus:ring-0 rounded" %></p>
+        <p><%= f.label :remember_me, class: "m-0 p-0 flex-1 h-full text-primary-700 text-sm font-bold cursor-pointer" %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="mt-8 flex items-center justify-between gap-4">
+    <%= f.submit "Sign in", class: "bg-primary-700 hover:bg-primary-800 cursor-pointer text-white rounded shadow appearence-none font-bold px-8 py-3" %>
+    <div class="text-sm">
+      <p>Don't have an account? <%= link_to "Sign up!", new_user_registration_path, class: "font-bold text-primary-700 hover:text-primary-800 transition" %></p>
+    </div>
+  </div>
+<% end %>
