@@ -1,4 +1,4 @@
-<%= link_to target, class: "flex items-center px-2 text-sm h-[60px] border-y-2 border-transparent hover:text-primary-700 dark:text-neutral-200 dark:hover:text-white #{active ? "text-primary-700 font-bold border-b-primary-700 dark:border-b-white" : "" } #{custom_class}" do %>
+<%= link_to target, class: "flex items-center px-2 text-sm h-[60px] border-y-2 border-transparent hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400 #{active ? "text-primary-700 font-bold border-b-primary-700 dark:border-b-primary-500" : "" } #{custom_class}" do %>
   <% if icon.present? %>
     <i class="<%= icon %> w-4 h-4 <%= "mr-3" if text %>"></i>
   <% end %>
