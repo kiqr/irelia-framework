@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "dry-initializer", "~> 3.1"
   spec.add_dependency "importmap-rails", "~> 1.1.6"
+  spec.add_dependency "meta-tags", "~> 2.20"
   spec.add_dependency "rails", ">= 7.1.3.2"
   spec.add_dependency "view_component", "~> 3.11"
   spec.add_dependency "view_component-contrib", "~> 0.2.2"
