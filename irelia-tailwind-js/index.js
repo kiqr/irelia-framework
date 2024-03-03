@@ -8,6 +8,7 @@ module.exports = {
   contentPath: gemRootPath + '/**/*.{erb,haml,html,slim}',
   preset: ({ colors, baseFontSize }) => {
     return {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
