@@ -1,7 +1,7 @@
 <% title "Sign in to your account" %>
 <% content_for :header do %>
-  <h1 class="font-bold font-headings text-neutral-600 text-2xl">Sign in to <strong class="text-primary-700">Irelia</strong></h1>
-  <p class="text-neutral-400">Sign in with your email address and password or select any of the other available options below.</p>
+  <h1 class="font-bold font-headings text-neutral-600 dark:text-neutral-100 text-2xl">Sign in to <strong class="text-primary-700">Irelia</strong></h1>
+  <p class="text-neutral-400 dark:text-neutral-200">Sign in with your email address and password or select any of the other available options below.</p>
 <% end %>
 
 <%#= render "devise/shared/social_auth_buttons" %>
@@ -28,7 +28,7 @@
 
   <div class="mt-8 flex items-center justify-between gap-4">
     <%= f.submit "Sign in", class: "bg-primary-700 hover:bg-primary-800 cursor-pointer text-white rounded shadow appearence-none font-bold px-8 py-3" %>
-    <div class="text-sm">
+    <div class="text-sm dark:text-neutral-200">
       <p>Don't have an account? <%= link_to "Sign up!", new_user_registration_path, class: "font-bold text-primary-700 hover:text-primary-800 transition" %></p>
     </div>
   </div>

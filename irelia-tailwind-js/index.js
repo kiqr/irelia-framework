@@ -14,6 +14,7 @@ module.exports = {
             primary: tailwindColors[colors['primary']],
             secondary: tailwindColors[colors['secondary']],
             neutral: tailwindColors[colors['neutral']],
+            dark: tailwindColors[colors['dark']]
           },
           fontFamily: {
             sans: ['Poppins'],
