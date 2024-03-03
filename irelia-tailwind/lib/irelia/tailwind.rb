@@ -2,6 +2,7 @@
 
 require "dry-initializer"
 require "view_component-contrib"
+require "importmap-rails"
 
 module Irelia
   module Tailwind

@@ -1,6 +1,12 @@
 <%= display_meta_tags site: Irelia.config.application_name, reverse: true, separator: "—" %>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
+<script>
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  }
+</script>
+
 <%= csrf_meta_tags %>
 <%= csp_meta_tag %>
 <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
