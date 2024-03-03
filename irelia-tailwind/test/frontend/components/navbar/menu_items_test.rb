@@ -12,8 +12,7 @@ class Navbar::MenuItems::ComponentTest < ViewComponent::TestCase
   end
 
   private
-
-  def build_component(**options)
-    Navbar::MenuItems::Component.new(**options)
-  end
+    def build_component(**options)
+      Navbar::MenuItems::Component.new(**options)
+    end
 end

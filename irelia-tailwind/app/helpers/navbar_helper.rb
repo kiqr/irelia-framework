@@ -2,15 +2,15 @@
 
 module NavbarHelper
   def navbar(&block)
-    render(Navbar::Container::Component.new) { yield }
+    render(Navbar::Container::Component.new, &block)
   end
 
   def navbar_items(&block)
-    render(Navbar::MenuItems::Component.new) { yield }
+    render(Navbar::MenuItems::Component.new, &block)
   end
 
   def navbar_right(&block)
-    render(Navbar::RightSection::Component.new) { yield }
+    render(Navbar::RightSection::Component.new, &block)
   end
 
   def navigation_item(text, target, options = {})

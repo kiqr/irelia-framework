@@ -12,8 +12,7 @@ class Navbar::RightSection::ComponentTest < ViewComponent::TestCase
   end
 
   private
-
-  def build_component(**options)
-    Navbar::RightSection::Component.new(**options)
-  end
+    def build_component(**options)
+      Navbar::RightSection::Component.new(**options)
+    end
 end
