@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= render "shared/head" %>
+    <style type="text/css">
+      form abbr[title] { display: none; }
+    </style>
+  </head>
+  <body class="h-screen relative">
+    <%= render "shared/navbar" %>
+    <div class="h-screen -top-[60px] relative grid lg:grid-cols-2 antialiased text-neutral-700 bg-neutral-50 dark:bg-dark-900">
+      <section class="bg-neutral-100 dark:bg-primary-900 hidden lg:flex"></section>
+      <section class="flex flex-1 flex-col">
+        <div class="flex-1 flex items-center justify-center px-8">
+          <section class="flex flex-col gap-8 items-center justify-center w-full max-w-xl">
+            <header class="flex flex-col items-center">
+              <div class="flex flex-col gap-y-2 text-center">
+                <%= yield :header %>
+              </div>
+            </header>
+
+            <% if alert %>
+              <div class="bg-white py-2 px-4 inline-block text-center w-full rounded shadow font-headings text-rose-500">
+                <%= alert %>
+              </div>
+            <% end %>
+
+            <main class="flex flex-col gap-4 w-full">
+              <%= yield %>
+            </main>
+          </section>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
