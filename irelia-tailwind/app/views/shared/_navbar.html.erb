@@ -20,9 +20,9 @@
 
   <%= navbar_right do %>
     <%#= render 'shared/navbar/select_account' %>
+    <%= navbar_button(nil, "#", { icon: "fa fa-bell" }) %>
     <%= navbar_separator %>
     <%= render(Navbar::DarkModeSwitcher::Component.new) %>
-    <%= navbar_button(nil, "#", { icon: "fa fa-bell" }) %>
     <%= navbar_button(nil, destroy_user_session_path, { method: :delete, icon: "fa fa-right-from-bracket" }) %>
   <% end %>
 <% end %>
