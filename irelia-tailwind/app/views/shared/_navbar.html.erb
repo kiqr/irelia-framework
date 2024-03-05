@@ -4,7 +4,7 @@
   <%= navbar_separator %>
 
   <% if account_selected? %>
-    <%= navbar_items do %>>
+    <%= navbar_items do %>
       <%= navigation_item "Dashboard", root_path, { icon: "fa fa-home" } %>
     <% end %>
   <% end %>
@@ -12,9 +12,6 @@
   <% unless account_selected? %>
     <%= navbar_items do %>
       <%= navigation_item "Onboarding", setup_account_path %>
-      <%= navigation_item "Pricing", "#" %>
-      <%= navigation_item "Terms & conditions", "#" %>
-      <%= navigation_item "Cancel my account", "#" %>
     <% end %>
   <% end %>
 
