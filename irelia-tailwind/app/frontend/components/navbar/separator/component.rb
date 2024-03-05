@@ -1,3 +1,7 @@
 # frozen_string_literal: true
 
-class Navbar::Separator::Component < ApplicationViewComponent; end
+module Navbar
+  module Separator
+    class Component < ApplicationViewComponent; end
+  end
+end

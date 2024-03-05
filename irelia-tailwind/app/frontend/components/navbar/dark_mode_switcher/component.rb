@@ -1,4 +1,8 @@
 # frozen_string_literal: true
 
-class Navbar::DarkModeSwitcher::Component < ApplicationViewComponent
+module Navbar
+  module DarkModeSwitcher
+    class Component < ApplicationViewComponent
+    end
+  end
 end

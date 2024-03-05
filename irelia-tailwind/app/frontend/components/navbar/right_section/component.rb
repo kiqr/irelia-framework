@@ -1,4 +1,8 @@
 # frozen_string_literal: true
 
-class Navbar::RightSection::Component < ApplicationViewComponent
+module Navbar
+  module RightSection
+    class Component < ApplicationViewComponent
+    end
+  end
 end

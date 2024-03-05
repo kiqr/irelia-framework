@@ -2,18 +2,21 @@
 
 require "test_helper"
 
-class Navbar::DarkModeSwitcher::ComponentTest < ViewComponent::TestCase
-  def test_renders
-    component = build_component
+module Navbar
+  module DarkModeSwitcher
+    class ComponentTest < ViewComponent::TestCase
+      def test_renders
+        component = build_component
 
-    render_inline(component)
+        render_inline(component)
 
-    assert_selector "div"
-  end
+        assert_selector "div"
+      end
 
-  private
-
-  def build_component(**options)
-    Navbar::DarkModeSwitcher::Component.new(**options)
+      private
+        def build_component(**options)
+          Navbar::DarkModeSwitcher::Component.new(**options)
+        end
+    end
   end
 end

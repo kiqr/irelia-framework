@@ -4,6 +4,7 @@ require "dry-initializer"
 require "importmap-rails"
 require "meta-tags"
 require "view_component-contrib"
+require "simple_form"
 
 module Irelia
   module Tailwind

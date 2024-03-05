@@ -1,4 +1,8 @@
 # frozen_string_literal: true
 
-class Navbar::MenuItems::Component < ApplicationViewComponent
+module Navbar
+  module MenuItems
+    class Component < ApplicationViewComponent
+    end
+  end
 end

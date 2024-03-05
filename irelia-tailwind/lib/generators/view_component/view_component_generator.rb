@@ -27,7 +27,8 @@ class ViewComponentGenerator < Rails::Generators::NamedBase
   def create_system_test_file
     return if options[:skip_system_test]
 
-    template "component_system_test.rb", File.join("test/system/frontend/components", class_path, "#{file_name}_test.rb")
+    template "component_system_test.rb",
+             File.join("test/system/frontend/components", class_path, "#{file_name}_test.rb")
   end
 
   def create_preview_file
