@@ -1,6 +1,6 @@
 {
   "name": "@kiqr/irelia-tailwind",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Configuration files and presets for the Irelia SaaS starter kit in Ruby on Rails",
   "main": "index.js",
   "repository": "https://github.com/kiqr/irelia-framework",
