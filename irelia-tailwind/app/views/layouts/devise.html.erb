@@ -6,12 +6,10 @@
       form abbr[title] { display: none; }
     </style>
   </head>
-  <body class="h-screen relative flex justify-center items-center lg:grid-cols-2 antialiased text-neutral-700 bg-neutral-50 dark:bg-dark-900">
+  <body class="h-screen relative flex justify-center items-cente antialiased text-neutral-700 bg-neutral-50 dark:bg-dark-900">
     <section class="flex flex-col gap-8 items-center justify-center w-full max-w-xl">
-      <header class="flex flex-col items-center">
-        <div class="flex flex-col gap-y-2 text-center">
-          <%= yield :header %>
-        </div>
+      <header class="flex flex-col items-center gap-y-2 text-center">
+        <%= yield :header %>
       </header>
 
       <% if alert %>

@@ -5,7 +5,7 @@ const execSync = require('child_process').execSync;
 const gemRootPath = execSync('bundle show irelia-tailwind', { encoding: 'utf-8' }).trim();
 
 module.exports = {
-  contentPath: gemRootPath + '/**/*.{erb,haml,html,slim}',
+  contentPath: gemRootPath + '/**/*.{erb,haml,html,slim,rb}',
   preset: ({ colors, baseFontSize }) => {
     return {
       darkMode: 'class',
