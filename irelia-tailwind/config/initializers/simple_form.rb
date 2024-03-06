@@ -9,25 +9,33 @@
 #
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
-  config.wrappers :input, tag: "div", class: "bg-white p-5 rounded shadow text-sm flex flex-col gap-y-1.5 w-full", error_class: "error" do |b|
-    b.use :html5
-    b.use :placeholder
 
-    b.optional :maxlength
-    b.optional :minlength
-    b.optional :pattern
-    b.optional :min_max
-    b.optional :readonly
+  config.wrappers :input, tag: "div", class: "w-full", error_class: "invalid", valid_class: "valid" do |w|
+    w.wrapper :input, tag: "div", class: "input-box bg-white p-5 rounded shadow text-sm flex flex-col gap-y-1.5 w-full relative" do |b|
 
-    b.use :label, class: "text-primary-700 font-bold text-sm uppercase whitespace-nowrap"
-    b.use :input, class: "appearance-none p-0 m-0 w-full border-0 focus:ring-0 focus:outline-none bg-white text-neutral-500 hover:text-primary-800 focus:text-primary-800 placeholder-neutral-400", error_class: "is-invalid"
+      b.use :html5
+      b.use :placeholder
+
+      b.optional :maxlength
+      b.optional :minlength
+      b.optional :pattern
+      b.optional :min_max
+      b.optional :readonly
+
+      b.use :hint, wrap_with: { tag: 'span', class: 'text-xs absolute mx-left absolute right-0 mr-4 text-neutral-400 italic' }
+      b.use :label, class: "text-primary-700 font-bold text-sm uppercase whitespace-nowrap"
+      b.use :input, class: "appearance-none p-0 m-0 w-full border-0 focus:ring-0 focus:outline-none bg-white text-neutral-500 hover:text-primary-800 focus:text-primary-800 placeholder-neutral-400", error_class: "is-invalid"
+    end
+
+    w.use :error, wrap_with: { tag: 'div', class: 'text-xs text-rose-500 italic pt-1.5' }
   end
 
   config.wrappers :inline_checkbox, tag: "div", class: "flex items-center gap-x-4 w-full", error_class: "error" do |b|
     b.use :html5
     b.use :input, class: "appearance-none focus:ring-0 focus:outline-none w-5 h-5 accent-primary-700 rounded border-neutral-200 shadow"
     b.use :label, class: "text-primary-700 dark:text-primary-500 py-2 w-full text-sm cursor-pointer"
-    b.use :error, wrap_with: { tag: "span", class: "error" }
+
+    b.use :error
   end
 
   # The default wrapper to be used by the FormBuilder.

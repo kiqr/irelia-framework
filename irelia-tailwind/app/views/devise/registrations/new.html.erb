@@ -4,18 +4,23 @@
   <p class="text-neutral-400 dark:text-neutral-200">Enter your email address and a secure password.</p>
 <% end %>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+<style>
+  .valid .input-box { border: 1px green solid; }
+  .invalid .input-box { border: 1px red solid; }
+</style>
 
-  <%= f.input :email, placeholder: "Enter a valid email address", required: true, autofocus: true, input_html: { autocomplete: "email" }%>
-  
-  <div class="flex justify-between gap-x-4">
-    <%= f.input :password, placeholder: "Create a secure password", required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation, placeholder: "Confirm your password", required: true, input_html: { autocomplete: "new-password" } %>
-  </div>
+<main class="flex flex-col gap-4 w-full max-w-3xl">
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.input :email, placeholder: "Enter a valid email address", required: true, autofocus: true, input_html: { autocomplete: "email" }%>
+    
+    <div class="flex justify-between items-start gap-x-4">
+      <%= f.input :password, placeholder: "Create a secure password", required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation, placeholder: "Confirm your password", required: true, input_html: { autocomplete: "new-password" } %>
+    </div>
 
-  <div class="mt-4 flex justify-between items-center">
-    <%= f.button :submit, "Create your account" %>
-    <p class="dark:text-neutral-200">Already have an account? <%= link_to "Sign in!", new_user_session_path, class: "font-bold text-primary-700 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-400 transition" %>
-  </div>
-<% end %>
+    <div class="mt-4 flex justify-between items-center">
+      <%= f.button :submit, "Create your account" %>
+      <p class="dark:text-neutral-200">Already have an account? <%= link_to "Sign in!", new_user_session_path, class: "font-bold text-primary-700 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-400 transition" %>
+    </div>
+  <% end %>
+</main>
