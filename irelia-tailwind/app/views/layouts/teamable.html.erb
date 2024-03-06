@@ -2,12 +2,14 @@
 <html>
   <head>
     <%= render "shared/head" %>
-    <style type="text/css">
-      form abbr[title] { display: none; }
-    </style>
   </head>
   <body class="h-screen relative">
     <%= render "shared/navbar" %>
+
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "flash #{key} fixed top-0 left-0 right-0 bg-white py-2 px-4 inline-block text-center w-full shadow" %>
+    <% end %>
+
     <div class="h-screen -top-[60px] relative flex justify-center items-center antialiased text-neutral-700 bg-neutral-50 dark:bg-dark-900">
       <section class="flex flex-1 flex-col">
         <div class="flex-1 flex items-center justify-center px-8">
@@ -17,12 +19,6 @@
                 <%= yield :header %>
               </div>
             </header>
-
-            <% if alert %>
-              <div class="bg-white py-2 px-4 inline-block text-center w-full rounded shadow font-headings text-rose-500">
-                <%= alert %>
-              </div>
-            <% end %>
 
             <main class="flex flex-col gap-4 w-full">
               <%= yield %>
