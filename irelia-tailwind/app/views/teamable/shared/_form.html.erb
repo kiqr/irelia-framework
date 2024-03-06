@@ -1,0 +1,5 @@
+<%= simple_form_for @account, url: setup_account_path, method: :post do |f| %>
+  <%= render 'teamable/shared/errors', resource: @account %>
+  <%= f.input :name, placeholder: @account.personal_account ? "Your full name" : "Team / organization name" %>
+  <%= f.button :submit, "Create account" %>
+<% end %>
