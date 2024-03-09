@@ -1,15 +1,15 @@
 <div data-controller="dropdown" class="relative block text-sm min-w-[20px]">
-  <button class="flex w-full items-center text-left gap-x-4 text-neutral-700 dark:text-neutral-200 cursor-pointer" data-action="dropdown#toggle click@window->dropdown#hide">
+  <button class="flex w-full items-center text-left gap-x-4 cursor-pointer" data-action="dropdown#toggle click@window->dropdown#hide">
     <img class="w-9 h-9 rounded" src="https://picsum.photos/50">
     <div class="flex flex-col pr-4 gap-y-0.5">
-      <strong class="text-primary-700"><%= current_account.name %></strong>
+      <strong><%= current_account.name %></strong>
       <% if current_account.personal_account? %>
-        <span class="flex items-center gap-x-1 text-xs">
+        <span class="flex text-neutral-500 dark:text-neutral-300 items-center gap-x-1 text-xs">
           <i class="fas fa-user"></i>
-          <%= current_account.name %>
+          Personal account
         </span>
       <% else %>
-        <span class="flex items-center gap-x-1 text-xs">
+        <span class="flex text-neutral-500 dark:text-neutral-300 items-center gap-x-1 text-xs">
           <i class="fas fa-users"></i>
           Team account
         </span>

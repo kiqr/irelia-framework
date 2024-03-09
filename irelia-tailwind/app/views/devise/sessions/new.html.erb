@@ -1,6 +1,6 @@
 <% title "Sign in to your account" %>
 <% content_for :header do %>
-  <h1 class="font-bold font-headings text-neutral-600 dark:text-neutral-100 text-2xl">Sign in to <strong class="text-primary-700 dark:text-primary-500">Irelia</strong></h1>
+  <h1 class="font-bold font-headings text-neutral-600 dark:text-neutral-100 text-2xl">Sign in to <strong class="text-primary-600">Irelia</strong></h1>
   <p class="text-neutral-400 dark:text-neutral-200">Sign in with your email address and password or select any of the other available options below.</p>
 <% end %>
 
@@ -12,7 +12,7 @@
 
     <div class="flex justify-between items-center">
       <%= f.button :submit, "Sign in" %>
-      <p class="dark:text-neutral-200">Don't have an account? <%= link_to "Sign up!", new_user_registration_path, class: "font-bold text-primary-700 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-400 transition" %></p>
+      <p class="dark:text-neutral-200">Don't have an account? <%= link_to "Sign up!", new_user_registration_path, class: "font-bold text-primary-600 transition" %></p>
     </div>
   <% end %>
 </main>

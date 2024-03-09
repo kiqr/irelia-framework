@@ -1,7 +1,7 @@
 <% title "Create a new account" %>
 <% content_for :header do %>
-  <h1 class="font-bold font-headings text-neutral-600 dark:text-neutral-100 text-2xl">Create your <strong class="text-primary-700 dark:text-primary-500">Irelia</strong> account</h1>
-  <p class="text-neutral-400 dark:text-neutral-200">Enter your email address and a secure password.</p>
+  <h1 class="font-bold font-headings text-neutral-600 dark:text-neutral-100 text-2xl">Create your <strong class="text-primary-600">Irelia</strong> account</h1>
+  <p class="text-neutral-400">Enter your email address and a secure password.</p>
 <% end %>
 
 <main class="flex flex-col gap-4 w-full max-w-2xl">
@@ -15,7 +15,7 @@
 
     <div class="mt-4 flex justify-between items-center">
       <%= f.button :submit, "Create your account" %>
-      <p class="dark:text-neutral-200">Already have an account? <%= link_to "Sign in!", new_user_session_path, class: "font-bold text-primary-700 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-400 transition" %>
+      <p class="dark:text-neutral-200">Already have an account? <%= link_to "Sign in!", new_user_session_path, class: "font-bold transition text-primary-600" %>
     </div>
   <% end %>
 </main>

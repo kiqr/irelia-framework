@@ -5,7 +5,8 @@
 
   <% if account_selected? %>
     <%= navbar_items do %>
-      <%= navigation_item "Dashboard", root_path, { icon: "fa fa-home" } %>
+      <%= navigation_item "Dashboard", root_path %>
+      <%= navigation_item "Reports", "#" %>
     <% end %>
   <% end %>
 
