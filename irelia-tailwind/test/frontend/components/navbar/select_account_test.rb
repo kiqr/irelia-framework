@@ -12,8 +12,7 @@ class Navbar::SelectAccount::ComponentTest < ViewComponent::TestCase
   end
 
   private
-
-  def build_component(**options)
-    Navbar::SelectAccount::Component.new(**options)
-  end
+    def build_component(**options)
+      Navbar::SelectAccount::Component.new(**options)
+    end
 end
