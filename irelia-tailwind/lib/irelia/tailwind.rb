@@ -2,6 +2,7 @@
 
 require "dry-initializer"
 require "importmap-rails"
+require "loaf"
 require "meta-tags"
 require "view_component-contrib"
 require "simple_form"

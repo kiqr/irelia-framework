@@ -2,7 +2,7 @@
 
 require "test_helper"
 
-class Container::ComponentTest < ViewComponent::TestCase
+class Page::Header::ComponentTest < ViewComponent::TestCase
   def test_renders
     component = build_component
 
@@ -12,7 +12,8 @@ class Container::ComponentTest < ViewComponent::TestCase
   end
 
   private
-    def build_component(**options)
-      Container::Component.new(**options)
-    end
+
+  def build_component(**options)
+    Page::Header::Component.new(**options)
+  end
 end

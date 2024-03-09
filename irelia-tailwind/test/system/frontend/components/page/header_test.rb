@@ -2,9 +2,9 @@
 
 require "application_system_test_case"
 
-class Container::ComponentSystemTest < ApplicationSystemTestCase
+class Page::Header::ComponentSystemTest < ApplicationSystemTestCase
   def test_default_preview
-    visit("/rails/view_components/container/default")
+    visit("/rails/view_componentspage/header/default")
 
     # assert_text "Hello!"
     # click_on("Click me!")

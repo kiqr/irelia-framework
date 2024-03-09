@@ -20,9 +20,9 @@ Gem::Specification.new do |spec|
     Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   end
 
-  spec.add_dependency "irelia-core", "~> 0.1.0"
   spec.add_dependency "dry-initializer", "~> 3.1"
   spec.add_dependency "importmap-rails", "~> 1.1.6"
+  spec.add_dependency "loaf", "~> 0.10.0"
   spec.add_dependency "meta-tags", "~> 2.20"
   spec.add_dependency "rails", ">= 7.1.3.2"
   spec.add_dependency "simple_form", "~> 5.3.0"
