@@ -8,4 +8,8 @@ module PageHelper
   def page_header(**arguments)
     render(Page::Header::Component.new(**arguments))
   end
+
+  def breadcrumbs
+    render(Page::Breadcrumbs::Component.new(breadcrumbs: breadcrumb_trail))
+  end
 end

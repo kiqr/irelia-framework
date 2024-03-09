@@ -2,4 +2,5 @@
 
 class Page::Breadcrumbs::Component < ApplicationViewComponent
   # with_collection_parameter :breadcrumbs
+  option :breadcrumbs
 end
